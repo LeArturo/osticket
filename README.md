@@ -14,3 +14,4 @@ docker run -d --name osticket \
     -e OSTICKET_DB_PASS=manager_secret=manager \
     -p 80:80 \
     osticket:latest
+# osticket
