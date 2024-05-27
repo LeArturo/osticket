@@ -15,8 +15,8 @@ RUN wget https://github.com/osTicket/osTicket/releases/download/v1.18.1/osTicket
     unzip /osTicket-v1.18.1.zip -d /var/www/html/osticket && \
     cp /var/www/html/osticket/include/ost-sampleconfig.php /var/www/html/osticket/include/ost-config.php && \
     chown -R www-data:www-data /var/www/html/osticket/ && \
-    find /var/www/html/. -type d -exec chmod 755 {} \; && \
-    find /var/www/html/. -type f -exec chmod 644 {} \;
+    find /var/www/html/. -type d -exec chmod -R 755 {} \; && \
+    find /var/www/html/. -type f -exec chmod -R 644 {} \;
 
 # Configurar Apache (asegúrate de proporcionar el archivo osticket.conf)
 COPY osticket.conf /etc/apache2/sites-available/
