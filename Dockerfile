@@ -12,8 +12,8 @@ RUN export DEBIAN_FRONTEND=noninteractive && \
 # Descargar osTicket
 RUN wget https://github.com/osTicket/osTicket/releases/download/v1.18.1/osTicket-v1.18.1.zip && \
     mkdir /var/www/html/osticket && \
-    unzip osTicket-v1.18.1.zip -d /var/www/html/osticket && \
-    cp /var/www/html/osticket/upload/include/ost-sampleconfig.php /var/www/html/osticket/upload/include/ost-config.php && \
+    unzip /osTicket-v1.18.1.zip -d /var/www/html/osticket && \
+    cp /var/www/html/osticket/include/ost-sampleconfig.php /var/www/html/osticket/include/ost-config.php && \
     chown -R www-data:www-data /var/www/html/osticket/ && \
     find /var/www/html/. -type d -exec chmod 755 {} \; && \
     find /var/www/html/. -type f -exec chmod 644 {} \;

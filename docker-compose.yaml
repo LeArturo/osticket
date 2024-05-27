@@ -9,7 +9,7 @@ services:
             - MYSQL_USER=osticket
             - MYSQL_PASSWORD=manager_secret
     web:
-        image: 
+        build: .
         depends_on:
             - db
         volumes:
