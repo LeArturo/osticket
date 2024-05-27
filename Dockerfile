@@ -20,7 +20,7 @@ RUN mkdir /var/www/html/osticket && \
     cd /var/www/html/osticket && \
     wget https://github.com/osTicket/osTicket/releases/download/v1.18.1/osTicket-v1.18.1.zip && \
     unzip osTicket-v1.18.1.zip -d /var/www/html/osticket && \
-    rm osTicket-v1.18.1.zip && \
+   #rm osTicket-v1.18.1.zip && \
     cd /var/www/html/osticket/upload/include/ && \
     cp ost-sampleconfig.php ost-config.php && \    
     sed -i "s/define('DBHOST','%CONFIG-DBHOST');/define('DBHOST', getenv('OSTICKET_DB_HOST'));/" /var/www/html/osticket/upload/include/ost-config.php && \
